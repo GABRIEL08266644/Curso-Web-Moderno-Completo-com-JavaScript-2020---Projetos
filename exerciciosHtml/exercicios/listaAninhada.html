@@ -10,10 +10,10 @@
     <h1>Projeto</h1>
     <ul class="tree">
         <li>
-            beckend
+            <span wm-folder>beckend</span>
             <ul>
                 <li>
-                    app
+                    <span wm-folder>app</span>
                     <ul>
                         <li>produto.js</li>
                         <li>usuario.js</li>
@@ -21,29 +21,38 @@
                     </ul>
                 </li>
                 <li>
-                    config
+                    <span wm-folder>config</span>
+                    <ul>
+                        <li>banco.js</li>
+                        <li>rotas.js</li>
+                        <li>servidor.js</li>
+                    </ul>
                 </li>
-                <ul>
-                    <li>banco.js</li>
-                    <li>rotas.js</li>
-                    <li>servidor.js</li>
-                </ul>
             </ul>
         </li>
         <li>
-            frontend
+            <span wm-folder>frontend</span>
+            <ul>
+                <li>
+                    <span wm-folder>public</span>
+                    <ul>
+                        <li>app.css</li>
+                        <li>app.js</li>
+                        <li>index.html</li>
+                    </ul>
+                </li>
+            </ul>
         </li>
-        <ul>
-            <li>
-                public
-                <ul>
-                    <li>app.css</li>
-                    <li>app.js</li>
-                    <li>index.html</li>
-                </ul>
-            </li>
-        </ul>
     </ul>
+    <script>
+        document.querySelectorAll('[wm-folder]').forEach(folder => {
+            folder.onclick = function(e) {
+                const ul = folder.nextElementSibling
+                const dspy = ul.style.display
+                ul.style.display = dspy === 'none' ? 'block' : 'none'
+            }
+        })
+    </script>
 </body>
 </html>
 
