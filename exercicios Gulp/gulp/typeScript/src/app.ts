@@ -1,5 +1,6 @@
 import { Carro, Vendavel } from './produto'
 
+// function exibir(v: any) {
 function exibir(v: Vendavel) {
     console.log(`${v.nome} custa ${v.preco}!`)
 }
