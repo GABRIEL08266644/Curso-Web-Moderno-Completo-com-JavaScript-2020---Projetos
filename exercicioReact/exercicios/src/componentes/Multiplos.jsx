@@ -1,4 +1,4 @@
-// import React, { Fragment } from 'react'
+import React, { Fragment } from 'react'
 import React from 'react'
 
 export const BoaTarde = props => <h1>Boa tarde {props.nome}!</h1>
